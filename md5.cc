@@ -1,7 +1,7 @@
 #include <iostream>
 #include <string>
 
-#define ulong unsigned int //for 64 bits
+#define ulong unsigned int //for 64 bits system
 //#define ulong unsigned long for 32bits system
 
 using namespace std;
@@ -71,7 +71,7 @@ string MD5(string origin)
 		c = C;
 		d = D;
 
-        FF(a, b, c, d, x[ 0],  7, 0xd76aa478);
+        	FF(a, b, c, d, x[ 0],  7, 0xd76aa478);
 		FF(d, a, b, c, x[ 1], 12, 0xe8c7b756);
 		FF(c, d, a, b, x[ 2], 17, 0x242070db);
 		FF(b, c, d, a, x[ 3], 22, 0xc1bdceee);
@@ -88,7 +88,7 @@ string MD5(string origin)
 		FF(c, d, a, b, x[14], 17, 0xa679438e);
 		FF(b, c, d, a, x[15], 22, 0x49b40821);
 
-        GG(a, b, c, d, x[ 1],  5, 0xf61e2562);
+        	GG(a, b, c, d, x[ 1],  5, 0xf61e2562);
 		GG(d, a, b, c, x[ 6],  9, 0xc040b340);
 		GG(c, d, a, b, x[11], 14, 0x265e5a51);
 		GG(b, c, d, a, x[ 0], 20, 0xe9b6c7aa);
@@ -105,7 +105,7 @@ string MD5(string origin)
 		GG(c, d, a, b, x[ 7], 14, 0x676f02d9);
 		GG(b, c, d, a, x[12], 20, 0x8d2a4c8a);
 
-        HH(a, b, c, d, x[ 5],  4, 0xfffa3942);
+        	HH(a, b, c, d, x[ 5],  4, 0xfffa3942);
 		HH(d, a, b, c, x[ 8], 11, 0x8771f681);
 		HH(c, d, a, b, x[11], 16, 0x6d9d6122);
 		HH(b, c, d, a, x[14], 23, 0xfde5380c);
@@ -122,7 +122,7 @@ string MD5(string origin)
 		HH(c, d, a, b, x[15], 16, 0x1fa27cf8);
 		HH(b, c, d, a, x[ 2], 23, 0xc4ac5665);
 
-        II(a, b, c, d, x[ 0],  6, 0xf4292244);
+        	II(a, b, c, d, x[ 0],  6, 0xf4292244);
 		II(d, a, b, c, x[ 7], 10, 0x432aff97);
 		II(c, d, a, b, x[14], 15, 0xab9423a7);
 		II(b, c, d, a, x[ 5], 21, 0xfc93a039);
@@ -139,7 +139,7 @@ string MD5(string origin)
 		II(c, d, a, b, x[ 2], 15, 0x2ad7d2bb);
 		II(b, c, d, a, x[ 9], 21, 0xeb86d391);
 
-        A = A + a;
+        	A = A + a;
 		B = B + b;
 		C = C + c;
 		D = D + d;
@@ -260,7 +260,7 @@ ulong II(ulong &a, ulong b, ulong c, ulong d, ulong mj, int s, ulong ti)
 
 
 /***********************
- 		reverse
+ 	reverse
 ***********************/
 ulong reverse(ulong input)
 {
