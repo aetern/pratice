@@ -1,7 +1,8 @@
 #include <iostream>
 #include <string>
 
-#define ulong unsigned int
+#define ulong unsigned int //for 64 bits
+//#define ulong unsigned long for 32bits system
 
 using namespace std;
 
